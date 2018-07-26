@@ -32,7 +32,6 @@ class Person{
         return this.gender;
     }
     
-    
     public Person(String firstName,String lastName,Gender gender,BigInteger number)
     {
         this.FirstName=firstName;
