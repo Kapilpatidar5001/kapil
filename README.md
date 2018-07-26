@@ -1,0 +1,69 @@
+import java.math.*;
+import java.util.*;
+class Person{
+    private String FirstName,LastName;
+    private Gender gender;
+    public BigInteger number;
+    Person()
+    {
+        this.FirstName=null;
+        this.LastName=null;
+        this.gender=null;
+    }
+    void setFirstName(String fn){
+        this.FirstName=fn;
+    }
+    void setLastName(String fn){
+        this.LastName=fn;
+    }
+    void setGender(Gender g){
+        Gender x=Gender.M;
+        Gender y=Gender.F;
+        if(x==g.M || y==g.F)
+        this.gender=g;
+      
+    }
+    
+    String getFirstName(){
+        return this.FirstName;
+    }
+    String getLastName(){
+        return this.LastName;
+    }
+    Gender getGender(){
+        return this.gender;
+    }
+    
+    
+    public Person(String firstName,String lastName,Gender gender,BigInteger number)
+    {
+        this.FirstName=firstName;
+        this.LastName=lastName;
+        this.gender=gender;
+        setNumber(number);
+        this.number=getNumber();
+    }
+    public enum Gender
+    {
+        M,F;
+    }
+    BigInteger getNumber()
+    {
+        return number;
+    }
+    void setNumber(BigInteger n)
+    {
+        this.number=n;
+    }
+    //Scanner sc=new Scanner(System.in);
+    public String displayDetails(Person p)
+    {
+       return(p.toString());
+    }
+    public String toString()
+    {
+        return ("FirstName: "+FirstName+"\nLastName: "+LastName+"\nGender: "+String.valueOf(gender)+"\nNumber: "+String.valueOf(number));
+    }
+    
+
+}
