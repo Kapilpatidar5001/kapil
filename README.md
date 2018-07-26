@@ -1,3 +1,4 @@
+# JAVA-Ass-1
 import java.math.*;
 import java.util.*;
 class Person{
@@ -17,11 +18,7 @@ class Person{
         this.LastName=fn;
     }
     void setGender(Gender g){
-        Gender x=Gender.M;
-        Gender y=Gender.F;
-        if(x==g.M || y==g.F)
         this.gender=g;
-      
     }
     
     String getFirstName(){
@@ -64,6 +61,4 @@ class Person{
     {
         return ("FirstName: "+FirstName+"\nLastName: "+LastName+"\nGender: "+String.valueOf(gender)+"\nNumber: "+String.valueOf(number));
     }
-    
-
 }
