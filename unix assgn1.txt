@@ -1,0 +1,609 @@
+Lab2
+1. pwd
+
+2.pwd
+
+3.whoami  or logname
+who
+
+4.ls .*
+
+5.ls -a
+
+6.ls -l
+
+7.ls chap* 
+
+8.mkdir ~/dir1
+
+9.mkdir ~/newdir
+mkdir ~/newdirectory
+
+10.ls -R ~/
+
+11.rmdir newdirectory
+
+12.mkdir temp
+
+13.rmdir newdir
+   ls -d */
+
+14.mkdir ./temp/directorynew
+
+15.cd 
+
+16.using relative path--> cd ./temp/directorynew
+using absolute path-->cd /home/11apr_system13/temp/directorynew
+
+17.rmdir ~/c_prog
+
+18.cd /etc
+
+19.ls -a /usr/bin | grep '^\.'
+
+20.cat >first.unix
+Hi! Good Morning everybody.
+Welcome to the First exercise on UNIX.
+Hope you enjoy doing the assignments.
+ctl+d
+
+21.cp first.unix first.unics
+
+22.cat first.unix first.unics
+
+23.mkdir temp/new
+
+24.cp ./*.* ./temp/directorynew
+
+25.mv first.unix ./temp/second.unix
+
+26.rm first.unix
+
+27.rm *.
+no such file or directory
+
+28. mv *[aco] ~/
+
+29.cp *unix ./temp
+
+30.rm -rf ~./temp
+
+31.rm -rf ./temp/*
+
+32.cat >friends
+Madhu 6966456 09/07/68
+Jamil 2345215 08/09/67
+Ajay 5546785 01/04/66
+Mano 7820022 09/07/68
+David 8281292 09/09/60
+Simmi 7864563 12/12/70
+Navin 2224311 30/05/68
+
+33.cat friends
+
+34.cat friends | cat >newfriends
+
+35.cat friends newfriends
+
+36.who 1> users
+
+37.cat friends | cat >> users
+
+38. date
+
+39.cal 01 1995
+                                    
+[11apr_system13@NDAUNIX ~]$ cal 01 1995
+    January 1995
+Su Mo Tu We Th Fr Sa
+ 1  2  3  4  5  6  7
+ 8  9 10 11 12 13 14
+15 16 17 18 19 20 21
+22 23 24 25 26 27 28
+29 30 31
+
+40.
+
+[11apr_system13@NDAUNIX ~]$ date "+%"
+%
+[11apr_system13@NDAUNIX ~]$ date +%
+%
+[11apr_system13@NDAUNIX ~]$ date +%m
+07
+[11apr_system13@NDAUNIX ~]$ date "+%m"
+07
+[11apr_system13@NDAUNIX ~]$ date "+%D"
+07/31/18
+[11apr_system13@NDAUNIX ~]$ date "+%d"
+31
+[11apr_system13@NDAUNIX ~]$ date "+%y"
+18
+[11apr_system13@NDAUNIX ~]$ date "+%/%Training Activity"
+%/09:32:56raining Activity
+[11apr_system13@NDAUNIX ~]$ date "+%Training Activity"
+09:33:29raining Activity
+[11apr_system13@NDAUNIX ~]$ date "+%r"
+09:34:22 AM
+[11apr_system13@NDAUNIX ~]$ date + %
+date: extra operand `%'
+Try `date --help' for more information.
+[11apr_system13@NDAUNIX ~]$ date "+ %"
+ %
+[11apr_system13@NDAUNIX ~]$ [11apr_system13@NDAUNIX ~]$ date +%
+-bash: [11apr_system13@NDAUNIX: command not found
+[11apr_system13@NDAUNIX ~]$ %
+cat > friends
+[11apr_system13@NDAUNIX ~]$ date +%m
+07
+[11apr_system13@NDAUNIX ~]$ date "+%m"
+07
+[11apr_system13@NDAUNIX ~]$ date "+%D"
+07/31/18
+[11apr_system13@NDAUNIX ~]$ date "+%d"
+31
+[11apr_system13@NDAUNIX ~]$ date "+%y"
+18
+[11apr_system13@NDAUNIX ~]$ date "+%/%Training Activity"
+%/09:32:56raining Activity
+[11apr_system13@NDAUNIX ~]$ date "+%Training Activity"
+09:33:29raining Activity
+[11apr_system13@NDAUNIX ~]$ date "+%r"
+09:34:22 AM
+
+
+
+
+LAB 3.
+
+1.chmod u+x chap1
+
+2.chmod ugo+x add.c
+
+3.chmod u-x,go+r aa.c
+
+4.chmod u+x a.c kk.c nato myfile
+
+5.cd /
+
+LAB 4.
+
+1.ls --help 1> lsdoc
+
+2.cat lsdoc | more
+
+3.head -n +4 lsdoc
+
+4.tail -n -7 lsdoc
+
+5.rm lsdoc
+
+6. cut -f3 friends | sort | uniq | wc -1
+
+7.grep '^Ma' friends
+
+8.cut -d' ' -f 1 friends | grep -E '^Da.*(id$|i$)'
+
+9.ls -R | find -type f
+
+10.ls -d */   or find -type d
+
+11. ls -d *chap | find -type d
+
+12.sort friends
+
+13.tr '[a-z]' [A-Z] friends
+
+14.ls -R 1> dir
+
+15.cat dir | cut -d' ' -f 1,9  or cat dir | cut -c 1-11,62
+
+16.cat dir | cut -c 62- 1> files.txt
+
+17.cat dir | cut -c 1-11 1> perms
+
+18.cat dir | cat -c 12 1> sizes
+
+19.ls -l | awk '{print($9," ",$2,$1)}'
+
+20.users | wc -w      or who | wc -l
+
+21.ls -Sr | head -n +1
+
+22.cat friends | wc -l
+
+23.emp.lst: Empid(4),Name(18),Designation(9),Dept(10),Date of Birth(8),Salary(5)
+dept.lst : Dept.Code(2),Name(10),Head of Dept’s id(4)
+desig.lst: Designation Abbr.(2), Name (9)
+
+
+25. date "+%T IST %a %d %b %Y"
+
+26.ls -l | awk '{print($9," ",$2)}' | sort -rk 2
+
+27.ls -l | awk '{print($9," ")}' | sort -k 1
+
+28.ls -l | awk '{print($9," ",$5)}' | sort -nk 2
+
+29. ls -1t | head -n +1
+
+
+
+LAB5.
+5.1: Working wth Vi Editor
+
+1.	Create a file using Vi. Enter the following text:
+
+A network is a group of computers that can communicate with each other, share resources, and access remote hosts or other networks. Netware is a computer network operating system designed to connect, manage, and maintain a network and its services. Some of the network services are Netware Directory Services (NDS), file system, printing and security.
+
+a.	Change the word “Netware” in the second line to “Novell Netware”.
+ANS: ESC+R
+
+b.	Insert the text “(such as hard disks and printers)” after “share resources” in the first line.
+ANS:  ESC + i
+
+c.	Append the following text to the file:
+	“Managing NDS is a fundamental administrator role because NDS provides a single point for accessing and managing most network resources.”
+ANS:	ESC+A
+
+2:  Create the data files, used in the previous lab sessions using vi editor.
+ANS:	vi filename.txt
+		vi friends
+		vi e.txt
+
+LAB6.
+1.
+
+echo "primary prompt: $PS1"
+echo "secondary prompt: $PS2"
+
+PS1=kapil
+PS2=kapil
+
+2.
+
+PS1="kapil#"
+
+3. echo "$SHELL"
+
+4. $continent=.Africa.
+        $echo .$continent.
+        ------------? Africa
+        $sh
+        $echo .$continent.
+        ------------? No Response
+        $continent=.Asia.
+        $echo .$continent.
+        ------------? Asia
+        $ctrl + d
+        $echo .$continent.
+        ------------? Africa
+        $sh
+        $echo .$continent.
+        ------------? No Response
+        $ctrl + d
+
+5. 
+$continent=.Africa.
+        export continent
+        $echo .$continent.
+        ------------? Africa
+        $sh
+        $echo .$continent.
+        ------------? Africa
+        $continent=.Asia.
+        $echo .$continent.
+        ------------? Asia
+        $ctrl + d
+        $echo .$continent.
+        ------------? Africa
+
+6.
+  r=$(who|grep "$1")
+        if [ -n "$r" ]
+        then
+        echo "$1 logged in"
+        echo $r
+        else
+        echo "$1 isn't logged in"
+        fi
+
+7.
+
+more * | cat
+
+8.
+
+if [ -e "$1" ]
+        then
+        echo "$1 File Found"
+        else
+        echo "$1 File not found"
+        fi
+ls -l $1 | cut -c 1-11
+
+9.
+
+if [ $1 -gt $2 ]; then
+        if [ $1 -gt $3 ]; then
+        echo "$1 is the largest"
+        else
+        echo "$3 is the largest"
+        fi
+        elif [ $2 -gt $3 ]; then
+        echo "$2 is the largest"
+        else
+        echo "$3 is the largest"
+        fi
+
+10.
+
+echo "Enter pattern: "
+        read pat
+        echo "Enter filename: "
+        read filename
+        if [ -f $filename ]
+        then
+        op=$(grep $pat $filename);
+        if [ -n "$op" ]
+        then
+        echo "$op"
+        else
+        echo "Pattern not found."
+        fi
+	fi
+
+11.
+
+echo "Enter file name"
+			read file
+	if [ ! -f $file ]; then
+			touch $file
+			echo "Successfully created file $file"
+			else
+			echo "File already exists! Do you want to override the file?(Y/N)"
+			read ans
+	if [ $ans -eq "Y" -o $ans -eq "y" ]; then
+			touch $file
+			echo "Successfully created file $file"
+			else
+			echo "Not creating file $file...";
+	fi
+	fi
+	}
+			create_dir(){
+					echo "Enter directory name"
+					read dir
+	if [ ! -d $dir ]; then
+					mkdir $dir
+					else
+					echo "Directory already exists!"
+	fi
+			}
+			cp_file&#40;&#41;{
+			echo "Enter source file name"
+			read source
+			echo "Enter destination file name"
+			read des
+	if [ -f $des ]; then
+			echo "Files exists at destination! Want to override(Y/N)"
+			read ans
+	if [ $ans -eq "Y" -o $ans -eq "y" ]; then
+			cp $source $des
+			echo "Successfully copied $source to $des"
+			else
+			echo "Not copying file...";
+	fi
+			else
+			cp $source $des
+			echo "Successfully copied $source to $des"
+	fi
+	}
+			mv_file&#40;&#41;{
+			echo "Enter source file name"
+			read source
+			echo "Enter destination file name"
+			read des
+	if [ -f $source ]; then
+	if [ -f $des ]; then
+			echo "Files exists at destination! Want to override(Y/N)"
+			read ans
+	if [ $ans -eq "Y" -o $ans -eq "y" ]; then
+			mv $source $des
+			echo "Successfully moved $source to $des"
+			else
+			echo "Not moving file...";
+	fi
+			else
+			mv $source $des
+			echo "Successfully moved $source to $des"
+	fi
+			else
+			echo "Source file does not exists"
+	fi
+	}
+			echo "Menu"
+			echo "1. Create a file"
+			echo "2. Create a directory"
+			echo "3. Copy file"
+			echo "4. Move file"
+			echo "5. Exit"
+			read choice
+			case $choice in
+			1)create_file;;
+			2)create_dir;;
+			3)cp_file;;
+			4)mv_file;;
+			5)exit;;
+12.yesno(){
+        echo "Do you really want to delete this file? [y/n]"
+        read choice
+        if [ $choice != 'y' ]
+        then
+        return 0
+        else
+        rm $1
+        return 1
+        fi
+        }
+        echo "Enter filename to delete: "
+        read filename
+        yesno $filename
+        ret=$?
+        if [ $ret -eq 1 ]
+        then
+        echo "$filename deleted"
+        else
+        echo "$filename was not deleted"
+        fi
+
+13. r1=$(who|grep "$1")
+        if [ -n "$r1" ]
+        then
+        echo "$1 logged in"
+        echo $r1
+        else
+        echo "$1 isn't logged in"
+fi
+        r2=$(who|grep "$2")
+        if [ -n "$r2" ]
+        then
+        echo "$2 logged in"
+        echo $r2
+        else
+        echo "$2 isn't logged in"
+fi
+        r3=$(who|grep "$3")
+if [ -n "$r3" ]
+        then
+        echo "$3 logged in"
+        echo $r3
+        else
+        echo "$3 isn't logged in"
+fi
+        r4=$(who|grep "$4")
+if [ -n "$r4" ]
+        then
+        echo "$4 logged in"
+        echo $r4
+        else
+        echo "$4 isn't logged in"
+fi
+        sh userlog.sh raunak rtw rtw
+        Hari isn't logged in
+        root logged in
+        root :0 2017-07-13 23:44 (:0) root pts/0 2017-07-12 00:54 (:0)
+        root logged in
+        root :0 2017-07-13 23:44 (:0) root pts/0 2017-07-12 00:54 (:0)
+        Hari isn't logged in
+
+14.
+        #fl.sh
+        echo "Enter first name"
+        read fname
+        echo "Enter last name"
+        read lname
+        echo "Your name is$fname $lname"
+
+15.
+
+$ find . -mtime -1 -print
+
+16.  
+
+$ ls -p -l | grep -v /
+
+17.
+
+echo "Enter First Path"
+        read path1
+        echo "Enter Second Path"
+        read path2
+        echo "-----------Path 1 Files-----------------------"
+        ls $path1
+        echo "-----------Path 2 Files-----------------------"
+        ls $path2
+
+18.  
+
+echo "The script name is $0"
+        echo "The script pid is $$"
+
+19.
+
+$ cat "$2 $3 > $1"
+
+20.
+
+ch='y'
+			while [ $ch == "y" ]
+			do
+			echo "1. Calendar of the current month"
+			echo "2. Search for a pattern"
+			echo "3. Count no. of directories/ sub-directories in directory"
+			echo "Enter 1, 2 or 3:"
+			read choice
+			case $choice in
+
+	1) echo "Calendar for this month"
+			cal;;
+
+	2) echo "Enter pattern:"
+			read pat
+			grep $pat * -r;;
+
+	3) echo "Here is count of all the directories / sub-directories:"
+			ls -r * | wc -l;;
+			*) echo "Enter valid choic.";;
+			esac
+			$ sh menu.sh
+			1. Calendar of the current month
+			2. Search for a pattern
+			3. Count no. of directories/ sub-directories in directory
+
+21.
+
+$ echo "Enter date: (dd-mm-yyyy)"
+        read date
+        DAY=$(cut -d"-" -f1<<<"$date")
+        MONTH=$(cut -d"-" -f2<<<"$date")
+        YEAR=$(cut -d"-" -f3<<<"$date")
+        newdate="$MONTH/$DAY/$YEAR"
+        day=$(date -d $newdate +'%A')
+        #echo $day
+        case $day in
+        "Monday") echo "Monday Blues" ;;
+        "Tuesday") echo "Still tuesday" ;;
+        "Wednesday") echo "Boring wednesday" ;;
+        "Thursday") echo "Nearing weekend" ;;
+        "Friday") echo "It's the weekend!" ;;
+        "Saturday") echo "One more day off!" ;;
+        "Sunday") echo "Monday tomorrow" ;;
+        *) echo "Bye" ;;
+        esac
+
+22.ls -l | cut -c 62- | grep *.1st
+
+23.
+echo "Enter Two numbers : "
+read a
+read b
+ 
+echo "Enter Choice :"
+echo "1. Addition"
+echo "2. Subtraction"
+echo "3. Multiplication"
+echo "4. Division"
+read ch
+ 
+case $ch in
+  1)res=`echo $a + $b | bc`
+  ;;
+  2)res=`echo $a - $b | bc`
+  ;;
+  3)res=`echo $a \* $b | bc`
+  ;;
+  4)res=`echo "scale=2; $a / $b" | bc`
+  ;;
+esac
+echo "Result : $res"
+
