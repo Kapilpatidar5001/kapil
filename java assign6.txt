@@ -1,0 +1,20 @@
+import java.util.List;
+
+import java.util.ArrayList ;
+
+
+class Source{
+	
+public List<String> removeElements(List<String> l1,List<String> l2){
+
+		//Write your code here
+		
+List<String> A1MinusB1 = new ArrayList<String>(l1);
+        
+A1MinusB1.removeAll(l2);
+        
+return A1MinusB1;
+	
+}
+
+}

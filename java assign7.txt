@@ -1,0 +1,13 @@
+import java.util.HashMap;
+
+class Source{
+	public HashMap<Integer,Integer> getSquares(int numbers[]){
+	    //Write your code here
+	     HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+ 
+    for (int n: numbers) {
+      map.put( n, n*n);
+    }
+    return map;
+	}
+}
